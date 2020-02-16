@@ -1,0 +1,150 @@
+"location","frequency","lat","lon","class","type","importance","country","continent","confidence"
+"Afghanistan",39,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Afghanistan   ",1,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Bangkok",1,13.7542529,100.493087,"place","city","0.66624067490556","Thailand","Asia",0
+"Baube­   ",1,42.6907271,-2.327968,"place","locality","0.36","Spain","Europe",0
+"be-",1,50.6402809,4.6667145,"boundary","administrative","0.9190605523573","Belgium","Europe",0
+"Be-   ",1,50.6402809,4.6667145,"boundary","administrative","0.9190605523573","Belgium","Europe",0
+"Bechtolsheim",2,49.8042,8.19389,"boundary","administrative","0.54520697980407","Germany","Europe",0
+"Berlin",2,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Bonn",1,50.735851,7.10066,"place","city","0.76645134320121","Germany","Europe",0
+"Brunnenfeld",1,47.1409585,9.8382525,"place","village","0.385","Austria","Europe",0
+"compound",1,5.0980089,-9.0696774,"place","hamlet","0.35","Liberia","Africa",0
+"Delhi",1,28.6517178,77.2219388,"place","city","0.77028949865446","India","Asia",1
+"Deutschland",1,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",0
+"Dhaka",1,23.7593572,90.3788136,"place","city","0.61011010927081","Bangladesh","Asia",0
+"Dubai",2,25.0657,55.1713,"place","city","0.64162136618549","United Arab Emirates","Asia",1
+"Erweiterung            ",1,51.6802251,7.1501458,"natural","peak","0.4","Germany","Europe",0
+"Frankfurt",1,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",1,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Ghazni",1,33.3149631,67.828989,"boundary","administrative","0.51753079462501","Afghanistan","Asia",1
+"Herat",52,34.3508273,62.2164003,"place","city","0.54154923762169","Afghanistan","Asia",1
+"Herat    ",1,34.3508273,62.2164003,"place","city","0.54154923762169","Afghanistan","Asia",1
+"Iran",4,32.6475314,54.5643516,"boundary","administrative","0.82470270361523","Iran","Asia",1
+"Istanbul",1,41.0096334,28.9651646,"place","city","0.71476566810029",NA,NA,1
+"Jalalabad",1,27.6768536,79.5397840151461,"boundary","administrative","0.56","India","Asia",1
+"Kabul",11,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Kabul    ",1,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Kandahar",1,31.6257718,65.7144771,"place","city","0.53595587552911","Afghanistan","Asia",1
+"Kuala Lumpur",1,3.1516964,101.6942371,"boundary","administrative","0.85059130045396","Malaysia","Asia",0
+"Kunduz",4,36.8707187,68.7563528,"boundary","administrative","0.47331917812472","Afghanistan","Asia",1
+"Manila",1,14.5970139,120.983978069871,"boundary","administrative","0.76017265517219","Philippines","Asia",0
+"many",1,49.0026397,6.5218763,"boundary","administrative","0.64847812051745","France","Europe",0
+"Mazar",2,52.0475464,29.2667179,"boundary","administrative","0.4746713142424","Belarus","Europe",1
+"mo­",1,38.7604815,-92.5617875,"boundary","administrative","0.73288134470033","United States of America","North America",0
+"National  ",1,39.5839716,-80.0375691,"place","hamlet","0.3991390262728","United States of America","North America",0
+"Nordkorea",1,40.3736611,127.0870417,"boundary","administrative","0.71262556129387","North Korea","Asia",0
+"Paris",1,48.8566969,2.3514616,"boundary","administrative","0.94171017155887","France","Europe",0
+"PP",2,-33.7401061,151.2698699,"waterway","stream","0.425","Australia","Australia",0
+"Singapur",1,1.340863,103.830391822121,"place","island","0.74327675510591","Singapore","Asia",0
+"Somalia",1,8.3676771,49.083416,"boundary","administrative","0.6812394356224","Somalia","Africa",0
+"soziokulturelle",1,51.42228985,14.5395220832877,"building","yes","0.101","Germany","Europe",0
+"Stadt  ",1,47.4364823,12.4044855929312,"boundary","administrative","0.63937437068958","Austria","Europe",0
+"Stadt   ",1,47.4364823,12.4044855929312,"boundary","administrative","0.63937437068958","Austria","Europe",0
+"Stadt Kabul",1,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Wasserversorger",1,47.05805915,15.6770662,"man_made","reservoir_covered","0.111","Austria","Europe",0
+"West-Afghanistan",1,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"years",1,36.119754,-81.68548,"waterway","stream","0.425","United States of America","North America",0
+"Afghanistan",14,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Bechtolsheim",1,49.8042,8.19389,"boundary","administrative","0.54520697980407","Germany","Europe",0
+"Berlin",2,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Bonn",1,50.735851,7.10066,"place","city","0.76645134320121","Germany","Europe",0
+"Deutschland",1,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",0
+"Frankfurt am Main",2,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Iran",2,32.6475314,54.5643516,"boundary","administrative","0.82470270361523","Iran","Asia",1
+"Kabul",31,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Nordkorea",1,40.3736611,127.0870417,"boundary","administrative","0.71262556129387","North Korea","Asia",0
+"PP",1,-33.7401061,151.2698699,"waterway","stream","0.425","Australia","Australia",0
+"Somalia",1,8.3676771,49.083416,"boundary","administrative","0.6812394356224","Somalia","Africa",0
+"Afghanistan",34,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Berlin",2,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",1
+"Bonn",1,50.735851,7.10066,"place","city","0.76645134320121","Germany","Europe",1
+"Frankfurt",3,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",1
+"Frankfurt am Main",1,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",1
+"Kabul",3,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"years",1,36.119754,-81.68548,"waterway","stream","0.425","United States of America","North America",0
+"Afghanistan",17,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Bangkok",1,13.7542529,100.493087,"place","city","0.66624067490556","Thailand","Asia",0
+"Berlin",2,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Frankfurt",1,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",1,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Ghazni",1,33.3149631,67.828989,"boundary","administrative","0.51753079462501","Afghanistan","Asia",1
+"Herat",1,34.3508273,62.2164003,"place","city","0.54154923762169","Afghanistan","Asia",1
+"Jalalabad",1,27.6768536,79.5397840151461,"boundary","administrative","0.56","India","Asia",1
+"Kabul",10,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Kandahar",1,31.6257718,65.7144771,"place","city","0.53595587552911","Afghanistan","Asia",1
+"Kunduz",16,36.8707187,68.7563528,"boundary","administrative","0.47331917812472","Afghanistan","Asia",1
+"Mazar",2,52.0475464,29.2667179,"boundary","administrative","0.4746713142424","Belarus","Europe",0
+"Nordkorea",1,40.3736611,127.0870417,"boundary","administrative","0.71262556129387","North Korea","Asia",0
+"PP",1,-33.7401061,151.2698699,"waterway","stream","0.425","Australia","Australia",0
+"Somalia",1,8.3676771,49.083416,"boundary","administrative","0.6812394356224","Somalia","Africa",0
+"Stadt Kabul",1,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Afghanistan",15,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Berlin",2,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Bonn",1,50.735851,7.10066,"place","city","0.76645134320121","Germany","Europe",0
+"Frankfurt",2,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",1,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Kabul",2,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"PP",2,-33.7401061,151.2698699,"waterway","stream","0.425","Australia","Australia",0
+"Afghanistan",44,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Berlin",1,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Bonn",1,50.735851,7.10066,"place","city","0.76645134320121","Germany","Europe",0
+"Deutschland",4,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",0
+"Frankfurt",1,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",1,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Kabul",6,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Paris",1,48.8566969,2.3514616,"boundary","administrative","0.94171017155887","France","Europe",0
+"Afghanistan",35,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Berlin",2,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Deutschland",3,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",0
+"Frankfurt",1,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",2,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Kabul",10,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Paris",1,48.8566969,2.3514616,"boundary","administrative","0.94171017155887","France","Europe",0
+"soziokulturelle",1,51.42228985,14.5395220832877,"building","yes","0.101","Germany","Europe",0
+"Afghanistan",31,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Berlin",1,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Deutschland",1,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",0
+"Frankfurt",2,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",2,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Iran",2,32.6475314,54.5643516,"boundary","administrative","0.82470270361523","Iran","Asia",1
+"Kabul",5,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Afghanistan",74,33.7680065,66.2385139,"boundary","administrative","0.74702748283731","Afghanistan","Asia",1
+"Berlin",1,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Frankfurt",2,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Kabul",9,34.5260131,69.1776476,"place","city","0.67169254620454","Afghanistan","Asia",1
+"Somalia",1,8.3676771,49.083416,"boundary","administrative","0.6812394356224","Somalia","Africa",0
+"Deutschland",2,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",1
+"Frankfurt am Main",2,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",1
+"Berlin",2,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",0
+"Deutschland",1,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",1
+"Frankfurt",2,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Berlin",3,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",1
+"Bonn",1,50.735851,7.10066,"place","city","0.76645134320121","Germany","Europe",0
+"Frankfurt",1,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",1,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Berlin",1,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",1
+"Deutschland",4,51.0834196,10.4234469,"boundary","administrative","0.99968148917225","Germany","Europe",1
+"Frankfurt",1,50.1106444,8.6820917,"place","city","0.79413256224963","Germany","Europe",0
+"Frankfurt am Main",1,50.1106444,8.6820917,"place","city","0.99413256224963","Germany","Europe",0
+"Ägypten",7,26.2540493,29.2675469,"boundary","administrative","0.78516395823323","Egypt","Africa",1
+"Arabische Republik Ägypten",1,26.2540493,29.2675469,"boundary","administrative","0.78516395823323","Egypt","Africa",1
+"Aswan",1,24.091071,32.897306,"place","city","0.53029160869442","Egypt","Africa",1
+"Auswärtiges Amt",1,52.5151698,13.399053656662,"office","government","0.73366670897967","Germany","Europe",1
+"Bauart",1,51.455417,7.3195849,"shop","trade","0.111","Germany","Europe",1
+"Berlin",1,52.5170365,13.3888599,"place","city","0.89753902824914","Germany","Europe",1
+"dex",2,-4.8556668,139.482552317527,"aeroway","aerodrome","0.35609057542022","Indonesia","Asia",0
+"FZ                     ",1,46.3498252,11.2263269,"highway","track","0.21","Italy","Europe",1
+"Heliopolis",1,34.0057062,36.2039130438022,"tourism","attraction","0.5127040447947","Lebanon","Asia",1
+"Helwan",1,29.8500001,31.333333,"place","town","0.43161572718758","Egypt","Africa",1
+"Kairo",4,30.048819,31.243666,"place","city","0.69602861356016","Egypt","Africa",1
+"Libyen",1,26.8234472,18.1236723,"boundary","administrative","0.70410242177042","Libya","Africa",1
+"Maghreb",1,33.38367245,44.3733934303913,"boundary","administrative","0.36","Iraq","Asia",1
+"Mittel",1,48.9665359,9.6058148,"place","locality","0.36","Germany","Europe",1
+"Sallum",1,31.5516178,25.1542126,"place","city","0.39547860670211","Egypt","Africa",1
+"tkm",1,32.3274558,35.0844741841166,"boundary","disputed","0.40668194371451","West Bank","Europe",1
+"Total",1,45.420063,12.3751361,"waterway","fuel","0.435",NA,NA,1
+"Tripolis",1,32.896672,13.1777923,"place","city","0.61906187251167","Libya","Africa",1
+"Tunis",1,33.8439408,9.400138,"boundary","administrative","0.73400678006166","Tunisia","Africa",1
+"US$",1,39.7837304,-100.4458825,"boundary","administrative","0.93569136745759","United States of America","North America",0
+"Waggon",1,43.4273642,39.9268522,"shop","clothes","0.111",NA,NA,1

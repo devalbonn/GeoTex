@@ -64,13 +64,15 @@ apply_clustering_algorithm_on_locations_to_get_confidence_scores <- function(nam
       # all locations, that belong to this cluster get confidence value of 1(secure); all locations belonging to other clusters get value 0 (unsecure)
       confidence[which(clusters==currently_best_cluster)]<-1
     }
-    # if no more than 2 different distnaces are present, set all to secure
+    # if no more than 2 different distances are present, set all to secure
     else{
+      # also setting confidence here to 0.5 might be useful, if we cant apply clusetring
       confidence[1:length(confidence)]<-1
     }
   }
   #if only a single location is present, set it to secure
   else{
+    # also setting confidence here to 0.5 might be useful, if we cant apply clusetring
     confidence[1:length(confidence)]<-1
   }
   return(confidence)
