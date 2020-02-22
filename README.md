@@ -32,7 +32,7 @@ OSM return the Metadata Type and Class for each retrieeved location. We can use 
 
 ### 6. Clustering fpr confidence
 To calculate a confidence for the locations we apply a clustering algorithm. For this purpose we initailly calculate a centroid for each document based on the given locations(location frequency is considered). Next, we calculate the distances from all locations to the centroid. Based on theese distances we apply k means clustering. The best k is determined iterative. The cluster whose, elements(locations) have the shortest distance to the centroid in average is assumed to be the "correct" cluster. All locations belongig to this cluster get an confidence score of 1. All other locations get a score of 0.
-The last step then is to, average these confice scores for all found locations over all documents.
+The last step then is to, average these confidence scores for all found locations over all documents.
 
 ### 7. Filtering against blacklist
 A blacklist can be used. It needs to be placed inside **external_information**. Then the found locations will be compared with the entries in the blacklist. If a location matches, it will be removed and not used anymore in further steps.
