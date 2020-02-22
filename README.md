@@ -5,7 +5,7 @@ script-based extraction of place names including geocoding
 ## Preconditions
 * required R libraries:
   + readtext, spacyr, cld2, tmaptool, geosphere, worldmapm, sp
-* spaCy with models "de" and "en" ((install spaCy)[https://spacy.io/usage/])
+* spaCy with models "de" and "en" ([install spaCy](https://spacy.io/usage/))
 
 ## Folder structure
 * **complete_location_extraction_script.R**: contains all necessary steps to extract locations from given texts in directory:**files_to_be_imported** 
