@@ -240,9 +240,9 @@ for(i in 1:length(imported_files)){
 print("finished enriching locations")
 
 
-#####
-# 9 #
-#####
+#######
+# 9.1 #
+#######
 ###################################
 # create/append whitelist entries #
 ###################################
@@ -271,9 +271,9 @@ for(i in 1:length(imported_files)){
 print("finished creation of whitelist")
 
 
-######
-# 10 #
-######
+#######
+# 9.2 #
+#######
 ######################
 # condense whitelist #
 ######################
@@ -284,9 +284,9 @@ whitelist_from_current_import<-condense_whitelist(whitelist=whitelist_from_curre
 # whitelist_from_current_import<-condense_whitelist(whitelist=whitelist_from_current_import,mode="coords")
 
 
-######
-# 11 #
-######
+#######
+# 9.3 #
+#######
 ##############################
 # save and extract whitelist #
 ##############################
@@ -298,7 +298,7 @@ write.csv(x = whitelist_from_current_import,file="external_information/whitelist
 
 
 ######
-# 12 #
+# 10 #
 ######
 ########################################
 # extraction of metadata using regexps #
