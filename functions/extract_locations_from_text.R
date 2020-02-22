@@ -46,6 +46,12 @@ extract_locations_from_text <- function(text,language,threshold_for_multiple_mod
   locations$token<-stringr::str_replace_all(string = locations$token,pattern = "\n",replacement = " ")
   locations$lemma<-stringr::str_replace_all(string = locations$lemma,pattern = "\n",replacement = " ")
   locations$lemma<-stringr::str_replace_all(string= locations$lemma, pattern = "_", replacement = " ")
+  # trim whitespaces
+  locations$lemma <- trimws(locations$lemma)
+  locations$lemma <- stringr::str_replace_all(string = locations$lemma, pattern = "[ ]+",replacement = " ")
+  # replace locations with only 1 character (most likely false positive)
+  locations<-locations[which(nchar(locations$lemma)>1),]
+  # use of lemma 
   locations<-data.frame(table(locations$lemma),stringsAsFactors = F)
   locations<-locations[order(locations[,2],decreasing=T),]
   colnames(locations)<-c("location","frequency")

@@ -5,25 +5,25 @@
 condense_whitelist <- function(whitelist,mode){
   if(mode=="name"){
     condensed_whitelist<-aggregate(as.numeric(whitelist[,"frequency"]),by=list(whitelist[,"location"]),FUN=sum)
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"lat"],by=list(data[,"location"]),FUN=function(x){return(x[1])})[,2])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"lon"],by=list(data[,"location"]),FUN=function(x){return(x[1])})[,2])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"class"],by=list(data[,"location"]),FUN=function(x){return(x[1])})[,2])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"type"],by=list(data[,"location"]),FUN=function(x){return(x[1])})[,2])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"importance"],by=list(data[,"location"]),FUN=function(x){return(mean(as.numeric(as.character(x))))})[,2])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"country"],by=list(data[,"location"]),FUN=function(x){return(x[1])})[,2])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"continent"],by=list(data[,"location"]),FUN=function(x){return(x[1])})[,2])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"confidence"],by=list(data[,"location"]),FUN=function(x){return(mean(as.numeric(as.character(x))))})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"lat"],by=list(whitelist[,"location"]),FUN=function(x){return(x[1])})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"lon"],by=list(whitelist[,"location"]),FUN=function(x){return(x[1])})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"class"],by=list(whitelist[,"location"]),FUN=function(x){return(x[1])})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"type"],by=list(whitelist[,"location"]),FUN=function(x){return(x[1])})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"importance"],by=list(whitelist[,"location"]),FUN=function(x){return(mean(as.numeric(as.character(x))))})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"country"],by=list(whitelist[,"location"]),FUN=function(x){return(x[1])})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"continent"],by=list(whitelist[,"location"]),FUN=function(x){return(x[1])})[,2])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"confidence"],by=list(whitelist[,"location"]),FUN=function(x){return(mean(as.numeric(as.character(x))))})[,2])
   }
   if(mode=="coords"){
     # use most frequent location name with identical coordiantes
-    condensed_whitelist<-aggregate((data[,"location"]),by=list(data[,"lat"],data[,"lon"]),FUN=function(x){return(names(sort(table(as.character(x)),decreasing=T))[1])})[,3]
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(as.numeric(data[,"frequency"]),by=list(data[,"lat"],data[,"lon"]),FUN=sum)[,c(3,1,2)])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"class"],by=list(data[,"lat"],data[,"lon"]),FUN=function(x){return(x[1])})[,3])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"type"],by=list(data[,"lat"],data[,"lon"]),FUN=function(x){return(x[1])})[,3])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"importance"],by=list(data[,"lat"],data[,"lon"]),FUN=function(x){return(x[1])})[,3])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"country"],by=list(data[,"lat"],data[,"lon"]),FUN=function(x){return(x[1])})[,3])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"continent"],by=list(data[,"lat"],data[,"lon"]),FUN=function(x){return(x[1])})[,3])
-    condensed_whitelist<-cbind(condensed_whitelist,aggregate(data[,"confidence"],by=list(data[,"lat"],data[,"lon"]),FUN=function(x){return(mean(as.numeric(as.character(x))))})[,3])
+    condensed_whitelist<-aggregate((whitelist[,"location"]),by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=function(x){return(names(sort(table(as.character(x)),decreasing=T))[1])})[,3]
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(as.numeric(whitelist[,"frequency"]),by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=sum)[,c(3,1,2)])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"class"],by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=function(x){return(x[1])})[,3])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"type"],by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=function(x){return(x[1])})[,3])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"importance"],by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=function(x){return(x[1])})[,3])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"country"],by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=function(x){return(x[1])})[,3])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"continent"],by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=function(x){return(x[1])})[,3])
+    condensed_whitelist<-cbind(condensed_whitelist,aggregate(whitelist[,"confidence"],by=list(whitelist[,"lat"],whitelist[,"lon"]),FUN=function(x){return(mean(as.numeric(as.character(x))))})[,3])
   }
   colnames(condensed_whitelist)<-colnames(whitelist)
   return(condensed_whitelist)
