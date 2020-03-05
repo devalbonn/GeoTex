@@ -8,10 +8,10 @@ script-based extraction of place names including geocoding
 * spaCy with models "de" and "en" ([install spaCy](https://spacy.io/usage/))
 
 ## Folder structure
-* **complete_location_extraction_script.R**: contains all necessary steps to extract locations from given texts in directory:**files_to_be_imported** 
-* directory **files_to_be_imported**: place the pdf files to use in this directory
-* directory **functions** contains all necessary functions for the applied substeps
-* directory **external_information**: blacklist, whitelist and location-cache files are located in this directory
+* 'complete_location_extraction_script.R': contains all necessary steps to extract locations from given texts in directory:'files_to_be_imported/' 
+* directory 'files_to_be_imported/': place the pdf files to use in this directory
+* directory 'functions/' contains all necessary functions for the applied substeps
+* directory 'external_information/': blacklist, whitelist and location-cache files are located in this directory
 
 ## Substeps
 In order to complete the whole task, 10 substeps need to be carried out.
