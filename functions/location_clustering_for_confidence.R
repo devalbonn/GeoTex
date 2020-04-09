@@ -3,9 +3,9 @@
 #' @param locations_with_meta data.frame containing the 4 variables: name, frequency, lat, long
 #' @return confidence for every location; either 1(if inside correct cluster) or 0(if inside wrong cluster)
 #' @examples
-#' apply_clustering_algorithm_on_locations_to_get_confidence_scores(names=c("Hamburg","Bremen","Lübeck","München"),frequencies=c(10,2,2,1),
+#' location_clustering_for_confidence(names=c("Hamburg","Bremen","Lübeck","München"),frequencies=c(10,2,2,1),
 #'                 lat=c(53.551086, 53.073635, 53.869720, 48.137154), lon=c(9.993682, 8.806422, 10.686389, 11.576124))
-apply_clustering_algorithm_on_locations_to_get_confidence_scores <- function(names,frequencies,lat,lon){
+location_clustering_for_confidence <- function(names,frequencies,lat,lon){
   N<-length(names)
   # @confidence confidence scores for locations
   confidence<-rep(0,length(names))

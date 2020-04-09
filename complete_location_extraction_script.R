@@ -181,7 +181,7 @@ print("finished filtering locations using classes/types")
 print("Clustering of locations to calculate confidence scores")
 pb = txtProgressBar(min = 0, max = length(imported_files), initial = 0) 
 for(i in 1:length(imported_files)){
-  confidence<-apply_clustering_algorithm_on_locations_to_get_confidence_scores(names = imported_files[[i]]$coordinates$query,
+  confidence<-location_clustering_for_confidence(names = imported_files[[i]]$coordinates$query,
                                                                                frequencies = imported_files[[i]]$coordinates$frequency,
                                                                                lat = imported_files[[i]]$coordinates$lat,
                                                                                lon = imported_files[[i]]$coordinates$lon)
@@ -238,7 +238,7 @@ for(i in 1:length(imported_files)){
   setTxtProgressBar(pb,i)
 }
 print("finished enriching locations")
-
+  
 
 #######
 # 9.1 #
