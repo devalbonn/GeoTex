@@ -182,9 +182,9 @@ print("Clustering of locations to calculate confidence scores")
 pb = txtProgressBar(min = 0, max = length(imported_files), initial = 0) 
 for(i in 1:length(imported_files)){
   confidence<-location_clustering_for_confidence(names = imported_files[[i]]$coordinates$query,
-                                                                               frequencies = imported_files[[i]]$coordinates$frequency,
-                                                                               lat = imported_files[[i]]$coordinates$lat,
-                                                                               lon = imported_files[[i]]$coordinates$lon)
+                                                 frequencies = imported_files[[i]]$coordinates$frequency,
+                                                 lat = imported_files[[i]]$coordinates$lat,
+                                                 lon = imported_files[[i]]$coordinates$lon)
   imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,confidence)
   setTxtProgressBar(pb,i)
 }
@@ -235,10 +235,13 @@ for(i in 1:length(imported_files)){
   country_and_continents<-coords2country_and_continent(points = data.frame(lon=imported_files[[i]]$coordinates$lon,
                                                                            lat=imported_files[[i]]$coordinates$lat))
   imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,country_and_continents)
+  # add file name to coordiantes table
+  file_names <- rep(stringr::str_remove(string = imported_files[[i]]$file_name,pattern = paste0(import_file_directory,"/")),nrow(imported_files[[i]]$coordinates))
+  imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,file_names)
   setTxtProgressBar(pb,i)
 }
 print("finished enriching locations")
-  
+
 
 #######
 # 9.1 #
@@ -253,9 +256,10 @@ print("finished enriching locations")
 # whitelist_path<-"external_information/whitelist.csv"
 print("creating whitelist for imported data")
 # create whitelist from imported data with aggregated confidence scores
-whitelist_from_current_import<-data.frame(location=NULL,frequency=NULL,lat=NULL,lon=NULL,class=NULL,type=NULL,importance=NULL,country=NULL,continent=NULL,confidence=NULL,stringsAsFactors = F)
+whitelist_from_current_import<-data.frame(id=NULL,location=NULL,frequency=NULL,lat=NULL,lon=NULL,class=NULL,type=NULL,importance=NULL,country=NULL,continent=NULL,confidence=NULL,stringsAsFactors = F)
 for(i in 1:length(imported_files)){
-  whitelist_from_current_import<-rbind(whitelist_from_current_import,data.frame(location=imported_files[[i]]$coordinates$query,
+  whitelist_from_current_import<-rbind(whitelist_from_current_import,data.frame(id=imported_files[[i]]$coordinates$file_names,
+                                                                                location=imported_files[[i]]$coordinates$query,
                                                                                 frequency=imported_files[[i]]$coordinates$frequency,
                                                                                 lat=imported_files[[i]]$coordinates$lat,
                                                                                 lon=imported_files[[i]]$coordinates$lon,
