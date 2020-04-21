@@ -8,6 +8,16 @@
 extract_locations_from_text <- function(text,language,threshold_for_multiple_models=0.4){
   # if only a single language is used
   if(class(language)=="character"){
+    # specify full name of spacy model
+    # add more languages and modes if nec.
+    switch(language,
+           de={
+             language="de_core_news_sm"
+           },
+           en={
+             language="en_core_web_sm"
+           }
+    )
     #initialize spacy with model corresponding to chosen language
     spacyr::spacy_initialize(model = language)
     # parse texts
@@ -19,30 +29,34 @@ extract_locations_from_text <- function(text,language,threshold_for_multiple_mod
   # if several languages are available
   else{
     # get relevant languages which have a proportion >= @threshold_for_multiple_models
-   language<-language[which(language$proportion>=threshold_for_multiple_models),"code"]
-   #initialize spacy with model corresponding to chosen language
-   spacyr::spacy_initialize(model = language[1])
-   # parse texts
-   parsed_text<-spacyr::spacy_parse(x = text, lemma = TRUE, entity = TRUE)
-   # extract location tags from parsed text
-   locations<-extract_tags(parsed_text=parsed_text,tags=c("LOC","GPE"))
-   spacyr::spacy_finalize()
-   # if more than one language had a higher proportion than @threshold_for_multiple_models
-   if(length(language)>1){
-     for( i in 2:length(language)){
-       #initialize spacy with model corresponding to chosen language
-       spacyr::spacy_initialize(model = language[i])
-       # parse texts
-       parsed_text_additional<-spacyr::spacy_parse(x = text, lemma = TRUE, entity = TRUE)
-       # extract location tags from parsed text
-       locations_additional<-extract_tags(parsed_text=parsed_text_additional,tags=c("LOC","GPE"))
-       spacyr::spacy_finalize()
-       # add "new" locations from locations_additional to locations
-       locations<-rbind(locations,locations_additional[-which(locations_additional[,"token"]%in%unique(locations$token)),])
-     }
-   }
+    language<-language[which(language$proportion>=threshold_for_multiple_models),"code"]
+    # specify full name of spacy model
+    # add more languages and modes if nec.
+    language<-stringr::str_replace(string = language,pattern = "de",replacement = "de_core_news_sm")
+    language<-stringr::str_replace(string = language,pattern = "en",replacement = "en_core_web_sm")
+    #initialize spacy with model corresponding to chosen language
+    spacyr::spacy_initialize(model = language[1])
+    # parse texts
+    parsed_text<-spacyr::spacy_parse(x = text, lemma = TRUE, entity = TRUE)
+    # extract location tags from parsed text
+    locations<-extract_tags(parsed_text=parsed_text,tags=c("LOC","GPE"))
+    spacyr::spacy_finalize()
+    # if more than one language had a higher proportion than @threshold_for_multiple_models
+    if(length(language)>1){
+      for( i in 2:length(language)){
+        #initialize spacy with model corresponding to chosen language
+        spacyr::spacy_initialize(model = language[i])
+        # parse texts
+        parsed_text_additional<-spacyr::spacy_parse(x = text, lemma = TRUE, entity = TRUE)
+        # extract location tags from parsed text
+        locations_additional<-extract_tags(parsed_text=parsed_text_additional,tags=c("LOC","GPE"))
+        spacyr::spacy_finalize()
+        # add "new" locations from locations_additional to locations
+        locations<-rbind(locations,locations_additional[-which(locations_additional[,"token"]%in%unique(locations$token)),])
+      }
+    }
   }
- # replace newlines inside of words
+  # replace newlines inside of words
   locations$token<-stringr::str_replace_all(string = locations$token,pattern = "\n",replacement = " ")
   locations$lemma<-stringr::str_replace_all(string = locations$lemma,pattern = "\n",replacement = " ")
   locations$lemma<-stringr::str_replace_all(string= locations$lemma, pattern = "_", replacement = " ")
