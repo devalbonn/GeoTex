@@ -231,13 +231,21 @@ print("enriching locations with metadata country and continent")
 # @pb progress bar for for loop
 pb = txtProgressBar(min = 0, max = length(imported_files), initial = 0,style=3) 
 for(i in 1:length(imported_files)){
-  
-  country_and_continents<-coords2country_and_continent(points = data.frame(lon=imported_files[[i]]$coordinates$lon,
-                                                                           lat=imported_files[[i]]$coordinates$lat))
-  imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,country_and_continents)
-  # add file name to coordiantes table
-  file_names <- rep(stringr::str_remove(string = imported_files[[i]]$file_name,pattern = paste0(import_file_directory,"/")),nrow(imported_files[[i]]$coordinates))
-  imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,file_names)
+  if(length(imported_files[[i]]$coordinates$lon)==0){
+    country<-character(0)
+    continent<-character(0)
+    imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,country, continent)
+    file_names <- rep(stringr::str_remove(string = imported_files[[i]]$file_name,pattern = paste0(import_file_directory,"/")),nrow(imported_files[[i]]$coordinates))
+    imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,file_names)
+  }
+  else{
+    country_and_continents<-coords2country_and_continent(points = data.frame(lon=imported_files[[i]]$coordinates$lon,
+                                                                             lat=imported_files[[i]]$coordinates$lat))
+    imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,country_and_continents)
+    # add file name to coordiantes table
+    file_names <- rep(stringr::str_remove(string = imported_files[[i]]$file_name,pattern = paste0(import_file_directory,"/")),nrow(imported_files[[i]]$coordinates))
+    imported_files[[i]]$coordinates<-cbind(imported_files[[i]]$coordinates,file_names)
+  }
   setTxtProgressBar(pb,i)
 }
 print("finished enriching locations")

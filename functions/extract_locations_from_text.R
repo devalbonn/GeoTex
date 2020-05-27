@@ -34,6 +34,11 @@ extract_locations_from_text <- function(text,language,threshold_for_multiple_mod
     # add more languages and modes if nec.
     language<-stringr::str_replace(string = language,pattern = "de",replacement = "de_core_news_sm")
     language<-stringr::str_replace(string = language,pattern = "en",replacement = "en_core_web_sm")
+    # ensure model works even if no language could have been detected;
+    # use de model as default
+    if(length(language)==0){
+      language<-"de_core_news_sm"
+    }
     #initialize spacy with model corresponding to chosen language
     spacyr::spacy_initialize(model = language[1])
     # parse texts
@@ -67,6 +72,10 @@ extract_locations_from_text <- function(text,language,threshold_for_multiple_mod
   locations<-locations[which(nchar(locations$lemma)>1),]
   # use of lemma 
   locations<-data.frame(table(locations$lemma),stringsAsFactors = F)
+  # if no location was found return empty data.frame with same format
+  if(nrow(locations)==0){
+    locations<-data.frame(matrix(ncol=2,nrow=0))
+  }
   locations<-locations[order(locations[,2],decreasing=T),]
   colnames(locations)<-c("location","frequency")
   return(locations)

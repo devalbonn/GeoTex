@@ -7,6 +7,10 @@
 #'                 lat=c(53.551086, 53.073635, 53.869720, 48.137154), lon=c(9.993682, 8.806422, 10.686389, 11.576124))
 location_clustering_for_confidence <- function(names,frequencies,lat,lon){
   N<-length(names)
+  # return character(0) if input data is empty
+  if(N==0){
+    return(character(0))
+  }
   # @confidence confidence scores for locations
   confidence<-rep(0,length(names))
   names(confidence)<-names
