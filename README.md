@@ -1,11 +1,15 @@
-# Location-Extraction
-script-based extraction of place names including geocoding
+# A tool to geocode project locations based on project document
+This tool is a collection of scripts representing a workflow to extract location names from text and assign coordinates to these location names.
 
-
-## Preconditions
-* required R libraries:
+## How to get started
+* Install R (and RStudio, if you like)
+* Install R libraries:
   + readtext, spacyr, cld2, tmaptool, geosphere, worldmapm, sp
-* spaCy with models "de" and "en" ([install spaCy](https://spacy.io/usage/))
+* Install spaCy with models "de" and "en" 
+  + easiest approach is via [spacyr::spacy_install()](https://rdrr.io/cran/spacyr/man/spacy_install.html)
+  + an alternative is to install Python (e.g. [Miniconda](https://conda.io/miniconda.html)) and then [spaCy](https://spacy.io/usage/)
+  + make sure language models "de_core_news_sm" and "en_core_web_sm" are available (e.g. [spacy_download_langmodel()](https://rdrr.io/cran/spacyr/man/spacy_download_langmodel.html))
+* Download or clone the tool from this page
 
 ## Folder structure
 * `complete_location_extraction_script.R`: contains all necessary steps to extract locations from given texts in directory `files_to_be_imported/` 
