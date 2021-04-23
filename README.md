@@ -1,5 +1,7 @@
 # A tool to geocode project locations based on project document
-This tool is a collection of scripts representing a workflow to extract location names from text and assign coordinates to these location names.
+This tool is a collection of scripts representing a workflow to extract location names from text and assign coordinates to these location names. The tool was developed by DEval in collaboration with Christian Kahmann from Leipzig University. [Wencker & Verspohl 2019](https://www.deval.org/files/content/Dateien/Evaluierung/Berichte/2020/DEval_Report_3_2019_German_Development_Cooperation_in_Fragile_Contexts.pdf) applied the tool to extract geographical information from evaluation reports. For more information on using text mining in evaluation see [Niekler and Wencker (2019)](http://www.deval.org/files/content/Dateien/Evaluierung/Policy_Briefs/2019/DEval_69_Policy%20Brief%201.19_Text%20Mining_EN_web.pdf).
+
+For questions or suggestions feel free to contact [Thomas Wencker](mailto:thomas.wencker@deval.org?subject=[GitHub]GeoTex).
 
 ## How to get started
 * Install R (and RStudio, if you like)
@@ -49,4 +51,3 @@ Here we create a dataframe containing the whitelist based on the currently impor
 
 ### 10. Extraction of Metadata from texts
 In the last step, we try to extract metadata from inside the texts. For this purpose we defince a vector of regular expressions for each metadata type. So far the meta data types: date, funding_volume and grade are integrated. More meta data types can be added accordingly. 
-
